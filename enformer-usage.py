@@ -76,7 +76,7 @@ get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'retina'")
 
 transform_path = 'gs://dm-enformer/models/enformer.finetuned.SAD.robustscaler-PCA500-robustscaler.transform.pkl'
 model_path = 'https://tfhub.dev/deepmind/enformer/1'
-work_dir = "/mnt/storage/idl-0/bio/boxiang/deepmind-research/enformer/data/"
+work_dir = "/mnt/storage/idl-0/bio/boxiang/enformer/data/"
 fasta_file = f'{work_dir}/genome.fa'
 clinvar_vcf = f'{work_dir}/clinvar.vcf.gz'
 
@@ -102,7 +102,7 @@ df_targets.head(3)
 # In[10]:
 
 
-get_ipython().system('mkdir -p /mnt/storage/idl-0/bio/boxiang/deepmind-research/enformer/data/')
+get_ipython().system('mkdir -p /mnt/storage/idl-0/bio/boxiang/enformer/data/')
 get_ipython().system('wget -O - http://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz | gunzip -c > {fasta_file}')
 pyfaidx.Faidx(fasta_file)
 get_ipython().system('ls {work_dir}')
