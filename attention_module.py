@@ -390,7 +390,6 @@ def positional_features_exponential(positions: tf.Tensor,
   Returns:
     A Tensor with shape [2 * seq_length - 1, feature_size].
   """
-  breakpoint()
   del bin_size  # Unused.
   if seq_length is None:
     seq_length = tf.reduce_max(tf.abs(positions)) + 1
